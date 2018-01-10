@@ -1,5 +1,5 @@
-let admin = require("firebase-admin");
 let init = require("./init");
+let moduleFireDb = require("./module.firebase.database");
 
 let main = function() {
     try {
@@ -9,7 +9,8 @@ let main = function() {
         init();
 
         console.log("Initialzition Done!");
-        console.log(admin);
+
+        moduleFireDb.create();
     } catch (err) {
         console.log(err);
     }
