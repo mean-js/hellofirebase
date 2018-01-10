@@ -1,12 +1,15 @@
-let serviceAccount = require("../awesome-c4686-firebase-adminsdk-pebil-26f50db823.json");
 let admin = require("firebase-admin");
+let init = require("./init");
 
 let main = function() {
     try {
         console.log("Main - Hello World!");
-        console.log(serviceAccount);
 
+        // initialize the singletons;
+        init();
 
+        console.log("Initialzition Done!");
+        console.log(admin);
     } catch (err) {
         console.log(err);
     }
